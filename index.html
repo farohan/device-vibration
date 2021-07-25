@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="device, vibration, phone, tablet, notification, API">
+    <meta name="description" content="Make your phone (or any other device) vibrate.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Device Vibration API Demo</title>
+</head>
+<body>
+    <h1 id="title">Make Your Device Vibrate</h1>
+    <h2 id="catcher">All with a simple Web API...</h2>
+    <div id="vibrate-btn-div">
+        <button id="vibrate-btn" onclick="vibrateDevice()"> ~ Vibrate ~ </button>
+    </div>
+    <div class="credits">
+        <p class="credit credit-name">Created by F. Rohan</p>
+        <p class="credit credit-date">Created on July 24, 2021</p>
+        <p class="credit credit-lang">Using HTML, CSS, JS, and a Web API</p>
+        <p class="credit credit-svg">Svg background by svgbackgrounds.com</p>
+    </div>
+    
+    <script>
+        const vibrateBtn = document.getElementById('vibrate-btn');
+        
+        function vibrateDevice() {
+            window.navigator.vibrate([200, 100, 200]); //Vibrate for 200 ms, stop for 100ms, then vibrate again for 200ms
+        }
+
+        //Go to this website for persistent vibration: https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API
+    </script>
+</body>
+</html>
